@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Armes Dekor | Hayalinizdeki Yaşam Alanlarını Tasarlıyoruz</title>
+<meta name="description" content="Armes Dekor; anahtar teslim iç mekan tadilatı, özel tasarım alçıpan TV üniteleri ve asma tavan sistemlerinde uzman ekibiyle hizmet verir. Ücretsiz keşif için hemen iletişime geçin.">
+<meta name="keywords" content="iç mekan tadilat, alçıpan TV ünitesi modelleri, asma tavan ustası, gergi tavan, dekoratif boya, anahtar teslim tadilat">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Armes Dekor | Hayalinizdeki Yaşam Alanlarını Tasarlıyoruz">
+<meta property="og:description" content="Anahtar teslim tadilat, özel tasarım alçıpan & asma tavan sistemleri ve modern TV üniteleri.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          anthracite: { DEFAULT: '#161618', dark: '#0A0A0B', light: '#242426' },
+          gold: { DEFAULT: '#E2231A', deep: '#C4130F', light: '#FF5B52' },
+          cream: '#F7F5F0',
+          steel: '#4A4D52',
+        },
+        fontFamily: {
+          heading: ['Poppins', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 10px 40px -10px rgba(10,10,11,0.3)',
+          gold: '0 10px 30px -8px rgba(226,35,26,0.5)',
+        }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-body text-anthracite bg-cream antialiased">
+
+<div id="scrollProgress" class="scroll-progress"></div>
+<div id="cursorRing" class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header id="siteHeader" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-transparent">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20 transition-all duration-300" id="headerInner">
+    <a href="#anasayfa" class="flex items-center gap-2.5 font-heading font-bold text-2xl tracking-wide text-white header-logo transition-colors duration-300">
+      <span class="w-11 h-11 rounded-xl bg-cream flex items-center justify-center p-1.5 shadow-soft shrink-0">
+        <img src="assets/logo-icon.png" alt="Armes Dekor" class="w-full h-full object-contain">
+      </span>
+      ARMES <span class="text-gold-deep">DEKOR</span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-9 font-medium text-sm header-nav-link">
+      <a href="#anasayfa" class="nav-link relative py-2 text-white/90 hover:text-gold-deep transition-colors">Anasayfa</a>
+      <a href="#hakkimizda" class="nav-link relative py-2 text-white/90 hover:text-gold-deep transition-colors">Hakkımızda</a>
+      <a href="#hizmetler" class="nav-link relative py-2 text-white/90 hover:text-gold-deep transition-colors">Hizmetler</a>
+      <a href="#neden-biz" class="nav-link relative py-2 text-white/90 hover:text-gold-deep transition-colors">Neden Biz</a>
+      <a href="#projeler" class="nav-link relative py-2 text-white/90 hover:text-gold-deep transition-colors">Projeler</a>
+      <a href="#yorumlar" class="nav-link relative py-2 text-white/90 hover:text-gold-deep transition-colors">Yorumlar</a>
+      <a href="#iletisim" class="nav-link relative py-2 text-white/90 hover:text-gold-deep transition-colors">İletişim</a>
+    </nav>
+
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="tel:+905394242103" class="flex items-center gap-2 text-white font-semibold text-sm header-phone">
+        <i class="fa-solid fa-phone-volume text-gold-deep"></i> 0539 424 21 03
+      </a>
+      <a href="#iletisim" class="btn-notch bg-gold-deep hover:bg-gold text-white font-heading font-semibold px-5 py-2.5 shadow-gold transition-all hover:-translate-y-0.5 text-sm">
+        Ücretsiz Keşif İste
+      </a>
+    </div>
+
+    <button id="menuBtn" aria-label="Menüyü Aç" class="lg:hidden text-white text-2xl z-50">
+      <i class="fa-solid fa-bars" id="menuIcon"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-anthracite-dark/98 backdrop-blur flex flex-col items-center justify-center gap-8 text-lg font-heading font-medium translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="flex items-center gap-2.5 font-heading font-bold text-xl text-white absolute top-8">
+      <span class="w-11 h-11 rounded-xl bg-cream flex items-center justify-center p-1.5 shrink-0">
+        <img src="assets/logo-icon.png" alt="Armes Dekor" class="w-full h-full object-contain">
+      </span>
+      ARMES <span class="text-gold-deep">DEKOR</span>
+    </div>
+    <a href="#anasayfa" class="mobile-link text-white hover:text-gold-deep transition-colors">Anasayfa</a>
+    <a href="#hakkimizda" class="mobile-link text-white hover:text-gold-deep transition-colors">Hakkımızda</a>
+    <a href="#hizmetler" class="mobile-link text-white hover:text-gold-deep transition-colors">Hizmetler</a>
+    <a href="#neden-biz" class="mobile-link text-white hover:text-gold-deep transition-colors">Neden Biz</a>
+    <a href="#projeler" class="mobile-link text-white hover:text-gold-deep transition-colors">Projeler</a>
+    <a href="#yorumlar" class="mobile-link text-white hover:text-gold-deep transition-colors">Yorumlar</a>
+    <a href="#iletisim" class="mobile-link text-white hover:text-gold-deep transition-colors">İletişim</a>
+    <a href="#iletisim" class="mobile-link btn-notch bg-gold-deep text-white px-8 py-3 font-semibold mt-4">Ücretsiz Keşif İste</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="anasayfa" class="relative h-screen min-h-[640px] flex items-center overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1920&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&q=80')"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-anthracite-dark/90 via-anthracite-dark/70 to-anthracite-dark/40"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 w-full">
+    <div class="max-w-2xl reveal">
+      <span class="inline-flex items-center gap-2 text-gold-deep font-semibold tracking-widest text-xs md:text-sm uppercase bg-white/10 border border-gold-deep/40 px-4 py-1.5 rounded-full mb-6">
+        <i class="fa-solid fa-star"></i> Premium İç Mekan Çözümleri
+      </span>
+      <h1 class="font-heading font-extrabold text-4xl sm:text-5xl md:text-6xl text-white leading-tight mb-6">
+        Ev &amp; Ofisiniz İçin <span class="text-gold-deep">Yeni Nesil</span> Dekorasyon Çözümleri
+      </h1>
+      <p class="text-white/85 text-base md:text-lg mb-9 max-w-xl leading-relaxed">
+        Anahtar teslim tadilat, özel tasarım alçıpan &amp; asma tavan sistemleri ve modern TV üniteleri ile mekanlarınıza değer katıyoruz.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#iletisim" class="text-center btn-notch bg-gold-deep hover:bg-gold text-white font-heading font-semibold px-8 py-4 shadow-gold transition-all hover:-translate-y-1">
+          Ücretsiz Keşif İste
+        </a>
+        <a href="#projeler" class="text-center border-2 border-white/40 hover:border-gold-deep hover:text-gold-deep text-white font-heading font-semibold px-8 py-4 rounded-full transition-all hover:-translate-y-1">
+          Projelerimizi İnceleyin
+        </a>
+      </div>
+
+      <div class="flex flex-wrap gap-8 mt-12 pt-8 border-t border-white/15">
+        <div>
+          <p class="text-3xl font-heading font-bold text-white"><span class="count-up" data-target="12">0</span><span class="text-gold-deep">+</span></p>
+          <p class="text-white/70 text-sm">Yıllık Tecrübe</p>
+        </div>
+        <div>
+          <p class="text-3xl font-heading font-bold text-white"><span class="count-up" data-target="450">0</span><span class="text-gold-deep">+</span></p>
+          <p class="text-white/70 text-sm">Tamamlanan Proje</p>
+        </div>
+        <div>
+          <p class="text-3xl font-heading font-bold text-white">%<span class="count-up" data-target="98">0</span></p>
+          <p class="text-white/70 text-sm">Müşteri Memnuniyeti</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#hizmetler" class="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-white/80 hover:text-gold-deep transition-colors">
+    <i class="fa-solid fa-chevron-down text-2xl animate-bounce"></i>
+  </a>
+
+  <div class="hero-roofline" aria-hidden="true">
+    <svg viewBox="0 0 1200 64" preserveAspectRatio="none"><polygon points="0,64 1200,0 1200,64"></polygon></svg>
+  </div>
+</section>
+
+<!-- ===================== MARQUEE ŞERİT ===================== -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span class="marquee-item">Anahtar Teslim Tadilat</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Özel Tasarım TV Üniteleri</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Asma Tavan Sistemleri</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Ücretsiz Keşif</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">12 Yıllık Tecrübe</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">450+ Tamamlanan Proje</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Anahtar Teslim Tadilat</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Özel Tasarım TV Üniteleri</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Asma Tavan Sistemleri</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">Ücretsiz Keşif</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">12 Yıllık Tecrübe</span><span class="marquee-sep">✦</span>
+    <span class="marquee-item">450+ Tamamlanan Proje</span><span class="marquee-sep">✦</span>
+  </div>
+</div>
+
+<!-- ===================== BİZ KİMİZ ===================== -->
+<section id="hakkimizda" class="py-24 md:py-32 bg-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center mb-28">
+      <div class="reveal relative order-2 lg:order-1">
+        <div class="relative rounded-2xl overflow-hidden shadow-soft">
+          <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1000&q=80" onerror="this.src='https://placehold.co/1000x1000/161618/F7F5F0?text=Armes+Dekor'" loading="lazy" alt="Armes Dekor atölyesi ve ekibi" class="w-full h-[380px] md:h-[460px] object-cover">
+        </div>
+        <div class="absolute -bottom-7 -right-5 md:-right-9 bg-anthracite text-white rounded-2xl p-6 shadow-gold w-44 sm:w-48">
+          <p class="font-heading font-extrabold text-4xl text-gold-deep leading-none"><span class="count-up" data-target="12">0</span><span class="text-white">+</span></p>
+          <p class="text-white/70 text-xs mt-2 uppercase tracking-widest">Yıllık Tecrübe</p>
+        </div>
+      </div>
+
+      <div class="reveal relative order-1 lg:order-2">
+        <span class="watermark-text" aria-hidden="true">HİKAYEMİZ</span>
+        <div class="relative z-10">
+          <span class="text-gold-deep font-semibold uppercase tracking-widest text-sm">Biz Kimiz</span>
+          <h2 class="font-heading font-bold text-3xl md:text-4xl text-anthracite mt-3 mb-6 leading-tight">Duvarları Değil, Hayalleri Şekillendiriyoruz</h2>
+          <p class="text-anthracite/70 leading-relaxed mb-4">Armes Dekor, küçük bir atölyede, tek bir inançla yola çıktı: her mekan, içinde yaşayan insanların hikayesini anlatmalı. Yıllar içinde bu inanç, alçıpan işçiliğinden özel tasarım TV ünitelerine, asma tavan sistemlerinden anahtar teslim tadilat ve inşaat hizmetlerine uzanan geniş bir uzmanlığa dönüştü.</p>
+          <p class="text-anthracite/70 leading-relaxed mb-4">Bugün Gaziantep merkezli ekibimizle; evlerde, ofislerde ve ticari mekanlarda, malzeme kalitesinden işçilik detayına kadar her adımı titizlikle planlayıp uyguluyoruz. Bizim için başarı, sadece tamamlanan bir proje değil; müşterimizin kapıdan girdiğinde hissettiği o "tam istediğim gibi olmuş" anıdır.</p>
+          <blockquote class="border-l-4 border-gold-deep pl-5 py-1 my-6 italic text-anthracite/80 font-heading text-lg">"Her proje bizim için sadece bir tadilat değil, bir ailenin yeni bir hikâyeye başlamasıdır."</blockquote>
+          <p class="text-anthracite/70 leading-relaxed">Bu yüzden her projede aynı sözü veriyoruz: şeffaf fiyatlandırma, zamanında teslim ve kalıcı bir kalite.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarihçemiz -->
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal relative">
+      <span class="watermark-text" aria-hidden="true">TARİHÇEMİZ</span>
+      <div class="relative z-10">
+        <span class="text-gold-deep font-semibold uppercase tracking-widest text-sm">Yolculuğumuz</span>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-anthracite mt-3 mb-5">Tarihçemiz</h2>
+        <p class="text-anthracite/70 leading-relaxed">Küçük bir atölyeden bölgenin güvenilir ismine uzanan yolculuğumuz.</p>
+      </div>
+    </div>
+
+    <div class="timeline relative">
+      <div class="timeline-line" aria-hidden="true"></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-y-12 gap-x-6">
+        <div class="timeline-item reveal">
+          <span class="timeline-year">2014</span>
+          <div class="timeline-dot"></div>
+          <h4 class="font-heading font-semibold text-base mt-4 mb-2">Kuruluş</h4>
+          <p class="text-anthracite/60 text-sm leading-relaxed">Armes Dekor, Gaziantep'te küçük bir atölye olarak, kaliteli işçilik tutkusuyla kapılarını açtı.</p>
+        </div>
+        <div class="timeline-item reveal" style="transition-delay:80ms">
+          <span class="timeline-year">2017</span>
+          <div class="timeline-dot"></div>
+          <h4 class="font-heading font-semibold text-base mt-4 mb-2">İlk 100 Proje</h4>
+          <p class="text-anthracite/60 text-sm leading-relaxed">Tavsiye üzerine büyüyen müşteri ağımızla bölgede güvenilir bir isim haline geldik.</p>
+        </div>
+        <div class="timeline-item reveal" style="transition-delay:160ms">
+          <span class="timeline-year">2020</span>
+          <div class="timeline-dot"></div>
+          <h4 class="font-heading font-semibold text-base mt-4 mb-2">TV Ünitesi Uzmanlığı</h4>
+          <p class="text-anthracite/60 text-sm leading-relaxed">LED aydınlatmalı, özel tasarım alçıpan TV ünitelerinde markalaştık.</p>
+        </div>
+        <div class="timeline-item reveal" style="transition-delay:240ms">
+          <span class="timeline-year">2023</span>
+          <div class="timeline-dot"></div>
+          <h4 class="font-heading font-semibold text-base mt-4 mb-2">Armes Dekor &amp; İnşaat</h4>
+          <p class="text-anthracite/60 text-sm leading-relaxed">Hizmet yelpazemizi anahtar teslim inşaat ve tadilat projelerine genişlettik.</p>
+        </div>
+        <div class="timeline-item reveal" style="transition-delay:320ms">
+          <span class="timeline-year">2026</span>
+          <div class="timeline-dot timeline-dot-active"></div>
+          <h4 class="font-heading font-semibold text-base mt-4 mb-2">Bugün</h4>
+          <p class="text-anthracite/60 text-sm leading-relaxed">450+ tamamlanmış proje ve 12+ yıllık tecrübeyle bölgenin güvenilir ismiyiz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HİZMETLER ===================== -->
+<section id="hizmetler" class="py-24 md:py-32 bg-cream relative">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal relative">
+      <span class="watermark-text" aria-hidden="true">HİZMETLER</span>
+      <div class="relative z-10">
+        <span class="text-gold-deep font-semibold uppercase tracking-widest text-sm">Hizmetlerimiz</span>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-anthracite mt-3 mb-5">Mekanlarınıza Değer Katan Çözümler</h2>
+        <p class="text-anthracite/70 leading-relaxed">Tasarımdan uygulamaya, her aşamada uzman ekibimizle yanınızdayız.</p>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+      <!-- Service 1 -->
+      <div class="service-card reveal group relative rounded-2xl overflow-hidden bg-white shadow-soft transition-all duration-500">
+        <span class="service-index">01</span>
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=Tadilat+%26+Proje'" loading="lazy" alt="Anahtar teslim tadilat ve proje" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-anthracite-dark/30 group-hover:bg-anthracite-dark/10 transition-colors duration-500"></div>
+        </div>
+        <div class="p-7">
+          <div class="w-14 h-14 -mt-14 mb-4 relative z-10 rounded-xl bg-gold-deep flex items-center justify-center text-2xl text-white shadow-gold">
+            <i class="fa-solid fa-trowel-bricks"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3">Anahtar Teslim Tadilat &amp; Proje</h3>
+          <p class="text-anthracite/65 text-sm leading-relaxed mb-4">Mutfak, banyo ve tüm ev yenileme çözümlerini tek elden, sürprizsiz olarak teslim ediyoruz.</p>
+          <button class="filter-trigger inline-flex items-center gap-2 text-anthracite font-semibold text-sm group-hover:text-gold-deep transition-colors" data-filter="tadilat">
+            Detaylı Bilgi <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card reveal group relative rounded-2xl overflow-hidden bg-white shadow-soft transition-all duration-500" style="transition-delay:80ms">
+        <span class="service-index">02</span>
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=TV+Unitesi'" loading="lazy" alt="Yeni nesil TV üniteleri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-anthracite-dark/30 group-hover:bg-anthracite-dark/10 transition-colors duration-500"></div>
+        </div>
+        <div class="p-7">
+          <div class="w-14 h-14 -mt-14 mb-4 relative z-10 rounded-xl bg-gold-deep flex items-center justify-center text-2xl text-white shadow-gold">
+            <i class="fa-solid fa-tv"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3">Yeni Nesil TV Üniteleri</h3>
+          <p class="text-anthracite/65 text-sm leading-relaxed mb-4">Şömineli, LED aydınlatmalı, mermer/ahşap detaylı özel alçıpan ve ahşap TV tasarımları.</p>
+          <button class="filter-trigger inline-flex items-center gap-2 text-anthracite font-semibold text-sm group-hover:text-gold-deep transition-colors" data-filter="tv">
+            Detaylı Bilgi <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card reveal group relative rounded-2xl overflow-hidden bg-white shadow-soft transition-all duration-500" style="transition-delay:160ms">
+        <span class="service-index">03</span>
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=Asma+Tavan'" loading="lazy" alt="Alçıpan ve asma tavan sistemleri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-anthracite-dark/30 group-hover:bg-anthracite-dark/10 transition-colors duration-500"></div>
+        </div>
+        <div class="p-7">
+          <div class="w-14 h-14 -mt-14 mb-4 relative z-10 rounded-xl bg-gold-deep flex items-center justify-center text-2xl text-white shadow-gold">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3">Alçıpan &amp; Asma Tavan</h3>
+          <p class="text-anthracite/65 text-sm leading-relaxed mb-4">Gizli ışıklı, gergi tavan, akustik ve modern mimari tavan uygulamaları.</p>
+          <button class="filter-trigger inline-flex items-center gap-2 text-anthracite font-semibold text-sm group-hover:text-gold-deep transition-colors" data-filter="tavan">
+            Detaylı Bilgi <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card reveal group relative rounded-2xl overflow-hidden bg-white shadow-soft transition-all duration-500" style="transition-delay:240ms">
+        <span class="service-index">04</span>
+        <div class="h-48 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=Dekorasyon+%26+Boya'" loading="lazy" alt="İç mekan dekorasyon ve boya" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-anthracite-dark/30 group-hover:bg-anthracite-dark/10 transition-colors duration-500"></div>
+        </div>
+        <div class="p-7">
+          <div class="w-14 h-14 -mt-14 mb-4 relative z-10 rounded-xl bg-gold-deep flex items-center justify-center text-2xl text-white shadow-gold">
+            <i class="fa-solid fa-paint-roller"></i>
+          </div>
+          <h3 class="font-heading font-semibold text-xl mb-3">İç Mekan Dekorasyon &amp; Boya</h3>
+          <p class="text-anthracite/65 text-sm leading-relaxed mb-4">Duvar çıtalama, dekoratif boya ve mimari dokunuşlarla mekanlarınızı yeniden tasarlıyoruz.</p>
+          <button class="filter-trigger inline-flex items-center gap-2 text-anthracite font-semibold text-sm group-hover:text-gold-deep transition-colors" data-filter="tadilat">
+            Detaylı Bilgi <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEDEN BİZ ===================== -->
+<section id="neden-biz" class="py-24 md:py-32 bg-anthracite-dark relative overflow-hidden">
+  <div class="absolute -top-32 -right-32 w-96 h-96 bg-gold-deep/10 rounded-full blur-3xl"></div>
+  <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-gold-deep/10 rounded-full blur-3xl"></div>
+
+  <div class="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal relative">
+      <span class="watermark-text watermark-light" aria-hidden="true">NEDEN BİZ</span>
+      <div class="relative z-10">
+        <span class="text-gold-deep font-semibold uppercase tracking-widest text-sm">Neden Armes Dekor?</span>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mt-3 mb-5">Uzmanlık ve Güvenle İnşa Ediyoruz</h2>
+        <p class="text-white/60 leading-relaxed">Her projede aynı titizlik, aynı şeffaflık ve aynı kalite standardı.</p>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="reveal bg-white/5 border border-white/10 hover:border-gold-deep/60 rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-2">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-gold-deep/15 flex items-center justify-center text-3xl text-gold-deep">
+          <i class="fa-solid fa-toolbox"></i>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-white mb-2">Uzman İşçilik &amp; Kaliteli Malzeme</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Yılların tecrübesiyle birinci sınıf uygulama.</p>
+      </div>
+      <div class="reveal bg-white/5 border border-white/10 hover:border-gold-deep/60 rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-2" style="transition-delay:80ms">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-gold-deep/15 flex items-center justify-center text-3xl text-gold-deep">
+          <i class="fa-solid fa-drafting-compass"></i>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-white mb-2">Kişiye Özel Tasarım</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Mekanınıza tam uyan, ölçüye özel modern mimari çözümler.</p>
+      </div>
+      <div class="reveal bg-white/5 border border-white/10 hover:border-gold-deep/60 rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-2" style="transition-delay:160ms">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-gold-deep/15 flex items-center justify-center text-3xl text-gold-deep">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-white mb-2">Zamanında Teslimat</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Söz verdiğimiz tarihte, eksiksiz anahtar teslim.</p>
+      </div>
+      <div class="reveal bg-white/5 border border-white/10 hover:border-gold-deep/60 rounded-2xl p-8 text-center transition-all duration-500 hover:-translate-y-2" style="transition-delay:240ms">
+        <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-gold-deep/15 flex items-center justify-center text-3xl text-gold-deep">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <h3 class="font-heading font-semibold text-lg text-white mb-2">Şeffaf Fiyatlandırma</h3>
+        <p class="text-white/60 text-sm leading-relaxed">Sürpriz maliyetler olmadan net bütçeleme ve ücretsiz keşif.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== İŞ BİRLİKLERİMİZ ===================== -->
+<section id="referanslar" class="py-24 md:py-28 bg-cream relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal relative">
+      <span class="watermark-text" aria-hidden="true">REFERANSLAR</span>
+      <div class="relative z-10">
+        <span class="text-gold-deep font-semibold uppercase tracking-widest text-sm">İş Birliklerimiz</span>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-anthracite mt-3 mb-5">Bize Güvenen Kurum ve Markalar</h2>
+        <p class="text-anthracite/70 leading-relaxed">Kamu kurumlarından özel sektöre, farklı ölçek ve alanlarda birlikte çalıştığımız güvenilir isimler.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="partners-marquee reveal">
+    <div class="partners-track">
+      <!-- set 1 -->
+      <div class="partner-card group"><img src="assets/partners/mmt-amerikan.png" alt="MMT Amerikan Hastanesi" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/bosch.png" alt="Bosch" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/loft.png" alt="LOFT" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/baklavaci-semsettin.png" alt="Baklavacı Şemsettin" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/milli-egitim.png" alt="Gaziantep İl Millî Eğitim Müdürlüğü" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/anadolubank.png" alt="Anadolubank" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/bim.png" alt="BİM" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/totalenergies.png" alt="TotalEnergies" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/rams-city.png" alt="Rams City Gaziantep" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/istiklal-mall.png" alt="İstiklal Mall" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/sehitkamil-belediyesi.png" alt="Şehitkamil Belediyesi" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/oxfam.png" alt="Oxfam" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/kedv.png" alt="Kadın Emeğini Değerlendirme Vakfı" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/valvoline.png" alt="Valvoline" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/oba-makarna.png" alt="OBA Makarna" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/general-nonwovens.png" alt="General Nonwovens & Composites" loading="lazy"></div>
+      <div class="partner-card group"><img src="assets/partners/bkm-mutfak.png" alt="BKM Mutfak" loading="lazy"></div>
+      <!-- set 2 (duplicate for seamless loop) -->
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/mmt-amerikan.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/bosch.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/loft.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/baklavaci-semsettin.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/milli-egitim.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/anadolubank.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/bim.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/totalenergies.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/rams-city.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/istiklal-mall.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/sehitkamil-belediyesi.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/oxfam.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/kedv.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/valvoline.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/oba-makarna.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/general-nonwovens.png" alt="" loading="lazy"></div>
+      <div class="partner-card group" aria-hidden="true"><img src="assets/partners/bkm-mutfak.png" alt="" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJE GALERİSİ ===================== -->
+<section id="projeler" class="py-24 md:py-32 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal relative">
+      <span class="watermark-text" aria-hidden="true">PROJELER</span>
+      <div class="relative z-10">
+        <span class="text-gold-deep font-semibold uppercase tracking-widest text-sm">Projelerimiz</span>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-anthracite mt-3 mb-5">Hayata Geçirdiğimiz Tasarımlar</h2>
+        <p class="text-anthracite/70 leading-relaxed">Tamamlanan projelerimizden bir seçki ve önce/sonra dönüşümlerimiz.</p>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
+      <button class="gallery-filter-btn active" data-filter="all">Tümü</button>
+      <button class="gallery-filter-btn" data-filter="tv">TV Üniteleri</button>
+      <button class="gallery-filter-btn" data-filter="tavan">Asma Tavan</button>
+      <button class="gallery-filter-btn" data-filter="tadilat">Tadilat &amp; Proje</button>
+    </div>
+
+    <!-- Before / After Feature -->
+    <div class="reveal mb-14 bg-white rounded-2xl shadow-soft p-5 md:p-8">
+      <div class="flex items-center justify-between mb-5 flex-wrap gap-2">
+        <h3 class="font-heading font-semibold text-xl">Önce / Sonra: Salon Dönüşümü</h3>
+        <span class="text-xs font-semibold text-gold-deep bg-gold-deep/10 px-3 py-1 rounded-full">Kaydırarak Karşılaştırın</span>
+      </div>
+      <div class="ba-slider rounded-xl" id="baSlider">
+        <img class="ba-img ba-before" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80" onerror="this.src='https://placehold.co/1200x750/2C3E50/F9F9F9?text=Once'" alt="Tadilat öncesi salon" loading="lazy">
+        <div class="ba-after-wrap" id="baAfterWrap">
+          <img class="ba-img ba-after" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80" onerror="this.src='https://placehold.co/1200x750/C89D7C/2C3E50?text=Sonra'" alt="Tadilat sonrası salon" loading="lazy">
+        </div>
+        <span class="ba-label ba-label-before">ÖNCE</span>
+        <span class="ba-label ba-label-after">SONRA</span>
+        <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Önce sonra karşılaştırma kaydırıcısı">
+      </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+      <div class="gallery-item reveal" data-category="tv">
+        <img src="https://images.unsplash.com/photo-1616137466211-f939a420be84?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=TV+Unitesi+1'" loading="lazy" alt="Ahşap detaylı TV ünitesi">
+        <div class="gallery-overlay"><p class="text-xs uppercase tracking-widest text-gold-deep mb-1">TV Ünitesi</p><h4 class="font-heading font-semibold text-white">Şömineli Ahşap TV Ünitesi</h4></div>
+      </div>
+      <div class="gallery-item reveal" data-category="tavan">
+        <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=Asma+Tavan+1'" loading="lazy" alt="Gizli ışıklı asma tavan">
+        <div class="gallery-overlay"><p class="text-xs uppercase tracking-widest text-gold-deep mb-1">Asma Tavan</p><h4 class="font-heading font-semibold text-white">Gizli Işıklı Gergi Tavan</h4></div>
+      </div>
+      <div class="gallery-item reveal" data-category="tadilat">
+        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=Mutfak+Tadilat'" loading="lazy" alt="Mutfak tadilatı">
+        <div class="gallery-overlay"><p class="text-xs uppercase tracking-widest text-gold-deep mb-1">Tadilat &amp; Proje</p><h4 class="font-heading font-semibold text-white">Modern Mutfak Yenileme</h4></div>
+      </div>
+      <div class="gallery-item reveal" data-category="tv">
+        <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=TV+Unitesi+2'" loading="lazy" alt="Mermer detaylı TV ünitesi">
+        <div class="gallery-overlay"><p class="text-xs uppercase tracking-widest text-gold-deep mb-1">TV Ünitesi</p><h4 class="font-heading font-semibold text-white">Mermer Desenli LED TV Ünitesi</h4></div>
+      </div>
+      <div class="gallery-item reveal" data-category="tavan">
+        <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=Asma+Tavan+2'" loading="lazy" alt="Akustik asma tavan uygulaması">
+        <div class="gallery-overlay"><p class="text-xs uppercase tracking-widest text-gold-deep mb-1">Asma Tavan</p><h4 class="font-heading font-semibold text-white">Akustik Tavan Uygulaması</h4></div>
+      </div>
+      <div class="gallery-item reveal" data-category="tadilat">
+        <img src="https://images.unsplash.com/photo-1571508601891-ca5e7a713859?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=Banyo+Tadilat'" loading="lazy" alt="Banyo tadilatı">
+        <div class="gallery-overlay"><p class="text-xs uppercase tracking-widest text-gold-deep mb-1">Tadilat &amp; Proje</p><h4 class="font-heading font-semibold text-white">Anahtar Teslim Banyo Yenileme</h4></div>
+      </div>
+      <div class="gallery-item reveal" data-category="tv">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=TV+Unitesi+3'" loading="lazy" alt="Minimal alçıpan TV ünitesi">
+        <div class="gallery-overlay"><p class="text-xs uppercase tracking-widest text-gold-deep mb-1">TV Ünitesi</p><h4 class="font-heading font-semibold text-white">Minimal Alçıpan TV Ünitesi</h4></div>
+      </div>
+      <div class="gallery-item reveal" data-category="tavan">
+        <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=Asma+Tavan+3'" loading="lazy" alt="Modern mimari tavan">
+        <div class="gallery-overlay"><p class="text-xs uppercase tracking-widest text-gold-deep mb-1">Asma Tavan</p><h4 class="font-heading font-semibold text-white">Kademeli Modern Tavan Tasarımı</h4></div>
+      </div>
+      <div class="gallery-item reveal" data-category="tadilat">
+        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" onerror="this.src='https://placehold.co/800x600/2C3E50/F9F9F9?text=Tadilat+Proje'" loading="lazy" alt="Ev yenileme projesi">
+        <div class="gallery-overlay"><p class="text-xs uppercase tracking-widest text-gold-deep mb-1">Tadilat &amp; Proje</p><h4 class="font-heading font-semibold text-white">Komple Ev Yenileme Projesi</h4></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MÜŞTERİ YORUMLARI ===================== -->
+<section id="yorumlar" class="py-24 md:py-32 bg-white overflow-hidden">
+  <div class="max-w-4xl mx-auto px-5 md:px-8 text-center mb-14 reveal relative">
+    <span class="watermark-text" aria-hidden="true">YORUMLAR</span>
+    <div class="relative z-10">
+      <span class="text-gold-deep font-semibold uppercase tracking-widest text-sm">Müşteri Yorumları</span>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl text-anthracite mt-3 mb-5">Bize Güvenenler Ne Diyor?</h2>
+      <p class="text-anthracite/70 leading-relaxed">Tamamladığımız projelerden memnun kalan müşterilerimizin deneyimleri.</p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-5 md:px-8 reveal">
+    <div class="relative">
+      <div class="overflow-hidden" id="testimonialViewport">
+        <div class="flex transition-transform duration-500 ease-out" id="testimonialTrack">
+
+          <div class="w-full flex-shrink-0 px-2">
+            <div class="bg-cream rounded-2xl p-8 md:p-10 text-center shadow-soft relative overflow-hidden">
+              <span class="testi-quote" aria-hidden="true">&quot;</span>
+              <div class="relative z-10">
+                <div class="text-gold-deep text-lg mb-4">★★★★★</div>
+                <p class="text-anthracite/80 text-lg italic leading-relaxed mb-6">"Salonumuzdaki TV ünitesi ve asma tavan uygulaması tam hayalimizdeki gibi oldu. Ekip son derece titiz ve zamanında teslim etti."</p>
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" onerror="this.src='https://placehold.co/100x100/2C3E50/F9F9F9?text=EY'" class="w-14 h-14 rounded-full object-cover mx-auto mb-3" loading="lazy" alt="Elif Yıldız">
+                <h4 class="font-heading font-semibold">Elif Yıldız</h4>
+                <p class="text-anthracite/50 text-sm">Kadıköy, İstanbul — TV Ünitesi</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full flex-shrink-0 px-2">
+            <div class="bg-cream rounded-2xl p-8 md:p-10 text-center shadow-soft relative overflow-hidden">
+              <span class="testi-quote" aria-hidden="true">&quot;</span>
+              <div class="relative z-10">
+                <div class="text-gold-deep text-lg mb-4">★★★★★</div>
+                <p class="text-anthracite/80 text-lg italic leading-relaxed mb-6">"Mutfak ve banyo tadilatımızı Armes Dekor'a emanet ettik, hiç pişman olmadık. Şeffaf fiyatlandırma ve kaliteli işçilik için teşekkürler."</p>
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" onerror="this.src='https://placehold.co/100x100/2C3E50/F9F9F9?text=MK'" class="w-14 h-14 rounded-full object-cover mx-auto mb-3" loading="lazy" alt="Mert Kaya">
+                <h4 class="font-heading font-semibold">Mert Kaya</h4>
+                <p class="text-anthracite/50 text-sm">Çankaya, Ankara — Tadilat &amp; Proje</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full flex-shrink-0 px-2">
+            <div class="bg-cream rounded-2xl p-8 md:p-10 text-center shadow-soft relative overflow-hidden">
+              <span class="testi-quote" aria-hidden="true">&quot;</span>
+              <div class="relative z-10">
+                <div class="text-gold-deep text-lg mb-4">★★★★★</div>
+                <p class="text-anthracite/80 text-lg italic leading-relaxed mb-6">"Gergi tavan ve gizli aydınlatma sistemi ofisimize çok şık bir hava kattı. Ekip profesyonel, iletişim çok rahattı."</p>
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=100&q=80" onerror="this.src='https://placehold.co/100x100/2C3E50/F9F9F9?text=SD'" class="w-14 h-14 rounded-full object-cover mx-auto mb-3" loading="lazy" alt="Selin Demir">
+                <h4 class="font-heading font-semibold">Selin Demir</h4>
+                <p class="text-anthracite/50 text-sm">Bornova, İzmir — Asma Tavan</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full flex-shrink-0 px-2">
+            <div class="bg-cream rounded-2xl p-8 md:p-10 text-center shadow-soft relative overflow-hidden">
+              <span class="testi-quote" aria-hidden="true">&quot;</span>
+              <div class="relative z-10">
+                <div class="text-gold-deep text-lg mb-4">★★★★★</div>
+                <p class="text-anthracite/80 text-lg italic leading-relaxed mb-6">"Keşiften teslimata kadar her adımda net bilgilendirildik. Sürpriz maliyet çıkmadı, söz verilen tarihte teslim aldık."</p>
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" onerror="this.src='https://placehold.co/100x100/2C3E50/F9F9F9?text=CA'" class="w-14 h-14 rounded-full object-cover mx-auto mb-3" loading="lazy" alt="Caner Aydın">
+                <h4 class="font-heading font-semibold">Caner Aydın</h4>
+                <p class="text-anthracite/50 text-sm">Nilüfer, Bursa — Anahtar Teslim Tadilat</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button id="testimonialPrev" aria-label="Önceki yorum" class="carousel-arrow left-0 md:-left-6"><i class="fa-solid fa-chevron-left"></i></button>
+      <button id="testimonialNext" aria-label="Sonraki yorum" class="carousel-arrow right-0 md:-right-6"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <div class="flex justify-center gap-2 mt-8" id="testimonialDots"></div>
+  </div>
+</section>
+
+<!-- ===================== İLETİŞİM ===================== -->
+<section id="iletisim" class="py-24 md:py-32 bg-anthracite-dark relative overflow-hidden">
+  <div class="absolute top-0 right-0 w-96 h-96 bg-gold-deep/10 rounded-full blur-3xl -translate-y-1/2"></div>
+
+  <div class="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
+    <div class="text-center max-w-2xl mx-auto mb-16 reveal relative">
+      <span class="watermark-text watermark-light" aria-hidden="true">İLETİŞİM</span>
+      <div class="relative z-10">
+        <span class="text-gold-deep font-semibold uppercase tracking-widest text-sm">İletişim</span>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-white mt-3 mb-5">Ücretsiz Keşif İçin Bize Ulaşın</h2>
+        <p class="text-white/60 leading-relaxed">Formu doldurun, size en kısa sürede geri dönüş yapalım.</p>
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-10">
+      <!-- Form -->
+      <div class="lg:col-span-3 reveal">
+        <form id="contactForm" class="bg-white rounded-2xl p-6 md:p-10 shadow-soft space-y-5" novalidate>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="adSoyad" class="block text-sm font-semibold text-anthracite mb-2">Ad Soyad *</label>
+              <input type="text" id="adSoyad" name="adSoyad" required class="form-input" placeholder="Adınız Soyadınız">
+              <p class="form-error" data-error-for="adSoyad">Lütfen adınızı ve soyadınızı girin.</p>
+            </div>
+            <div>
+              <label for="telefon" class="block text-sm font-semibold text-anthracite mb-2">Telefon *</label>
+              <input type="tel" id="telefon" name="telefon" required class="form-input" placeholder="05XX XXX XX XX">
+              <p class="form-error" data-error-for="telefon">Lütfen geçerli bir telefon numarası girin.</p>
+            </div>
+          </div>
+
+          <div>
+            <label for="hizmetTuru" class="block text-sm font-semibold text-anthracite mb-2">Hizmet Türü *</label>
+            <select id="hizmetTuru" name="hizmetTuru" required class="form-input">
+              <option value="" selected disabled>Bir hizmet seçin</option>
+              <option value="TV Ünitesi">Yeni Nesil TV Üniteleri</option>
+              <option value="Asma Tavan">Alçıpan &amp; Asma Tavan</option>
+              <option value="Tadilat & Proje">Anahtar Teslim Tadilat &amp; Proje</option>
+              <option value="Dekorasyon & Boya">İç Mekan Dekorasyon &amp; Boya</option>
+              <option value="Diğer">Diğer</option>
+            </select>
+            <p class="form-error" data-error-for="hizmetTuru">Lütfen bir hizmet türü seçin.</p>
+          </div>
+
+          <div>
+            <label for="mesaj" class="block text-sm font-semibold text-anthracite mb-2">Mesajınız</label>
+            <textarea id="mesaj" name="mesaj" rows="4" class="form-input resize-none" placeholder="Projeniz hakkında kısaca bilgi verin..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full btn-notch bg-gold-deep hover:bg-gold text-white font-heading font-semibold py-4 shadow-gold transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2">
+            <i class="fa-brands fa-whatsapp text-xl"></i> Ücretsiz Keşif Talebi Gönder
+          </button>
+
+          <p id="formSuccess" class="hidden text-center text-sm font-medium text-green-700 bg-green-50 border border-green-200 rounded-lg py-3 px-4">
+            <i class="fa-solid fa-circle-check mr-1"></i> Talebiniz alındı! WhatsApp üzerinden ekibimize yönlendiriliyorsunuz.
+          </p>
+        </form>
+      </div>
+
+      <!-- Info -->
+      <div class="lg:col-span-2 reveal flex flex-col gap-5">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gold-deep/15 flex items-center justify-center text-gold-deep text-xl shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h4 class="font-heading font-semibold text-white mb-1">Adres</h4>
+            <p class="text-white/60 text-sm">Mücahitler Mahallesi, 52075. Sokak <br>Kuğu Apt. No:12/A, Şehitkamil/Gaziantep</p>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gold-deep/15 flex items-center justify-center text-gold-deep text-xl shrink-0"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <h4 class="font-heading font-semibold text-white mb-1">Telefon</h4>
+            <p class="text-white/60 text-sm"><a href="tel:+905394242103" class="hover:text-gold-deep transition-colors">0539 424 21 03</a></p>
+          </div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-gold-deep/15 flex items-center justify-center text-gold-deep text-xl shrink-0"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h4 class="font-heading font-semibold text-white mb-1">E-posta</h4>
+            <p class="text-white/60 text-sm"><a href="mailto:armesdekorinsaat@gmail.com" class="hover:text-gold-deep transition-colors">armesdekorinsaat@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden h-52 border border-white/10">
+          <iframe src="https://www.google.com/maps?q=M%C3%BCcahitler%20Mahallesi%2052075%20Sokak%20Ku%C4%9Fu%20Apartman%C4%B1%20%C5%9Eehitkamil%20Gaziantep&output=embed" width="100%" height="100%" style="border:0; filter:grayscale(1) invert(0.9) contrast(0.9);" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Armes Dekor Konum"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-anthracite text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+    <div>
+      <a href="#anasayfa" class="flex items-center gap-2.5 font-heading font-bold text-xl mb-4">
+        <span class="w-10 h-10 rounded-lg bg-cream flex items-center justify-center p-1.5 shrink-0">
+          <img src="assets/logo-icon.png" alt="Armes Dekor" class="w-full h-full object-contain">
+        </span>
+        ARMES <span class="text-gold-deep">DEKOR</span>
+      </a>
+      <p class="text-white/60 text-sm leading-relaxed mb-5">Hayalinizdeki yaşam alanlarını tasarlıyoruz. Tadilat, alçıpan ve asma tavan işlerinde güvenilir çözüm ortağınız.</p>
+      <div class="flex gap-3">
+        <a href="https://www.instagram.com/armes_dekor?utm_source=qr" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-icon" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="https://wa.me/905394242103" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="font-heading font-semibold text-lg mb-5">Hızlı Bağlantılar</h4>
+      <ul class="space-y-3 text-sm text-white/60">
+        <li><a href="#hakkimizda" class="hover:text-gold-deep transition-colors">Hakkımızda</a></li>
+        <li><a href="#hizmetler" class="hover:text-gold-deep transition-colors">Hizmetler</a></li>
+        <li><a href="#neden-biz" class="hover:text-gold-deep transition-colors">Neden Biz</a></li>
+        <li><a href="#referanslar" class="hover:text-gold-deep transition-colors">İş Birliklerimiz</a></li>
+        <li><a href="#projeler" class="hover:text-gold-deep transition-colors">Projelerimiz</a></li>
+        <li><a href="#yorumlar" class="hover:text-gold-deep transition-colors">Yorumlar</a></li>
+        <li><a href="#iletisim" class="hover:text-gold-deep transition-colors">İletişim</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-heading font-semibold text-lg mb-5">Hizmetlerimiz</h4>
+      <ul class="space-y-3 text-sm text-white/60">
+        <li>Anahtar Teslim Tadilat &amp; Proje</li>
+        <li>Yeni Nesil TV Üniteleri</li>
+        <li>Alçıpan &amp; Asma Tavan Sistemleri</li>
+        <li>İç Mekan Dekorasyon &amp; Boya</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-heading font-semibold text-lg mb-5">İletişim</h4>
+      <ul class="space-y-3 text-sm text-white/60">
+        <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-gold-deep mt-1"></i> Mücahitler Mah. 52075. Sk. Kuğu Apt. No:12/A, Şehitkamil/Gaziantep</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-gold-deep"></i> 0539 424 21 03</li>
+        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-gold-deep"></i> armesdekorinsaat@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-5 md:px-8 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
+    <p>&copy; <span id="currentYear"></span> Armes Dekor. Tüm hakları saklıdır.</p>
+    <p>Tasarım &amp; Kodlama: Armes Dekor Dijital</p>
+  </div>
+</footer>
+
+<!-- ===================== FLOATING BUTONLAR ===================== -->
+<a href="https://wa.me/905394242103?text=Merhaba%2C%20Armes%20Dekor%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" aria-label="WhatsApp ile iletişime geçin" class="whatsapp-float">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<button id="backToTop" aria-label="Yukarı çık" class="back-to-top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+/* ==================== Genel ==================== */
+html { scroll-behavior: smooth; }
+::selection { background: #E2231A; color: #fff; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #F7F5F0; }
+::-webkit-scrollbar-thumb { background: #161618; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #E2231A; }
+
+/* ==================== Scroll Progress Bar ==================== */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #E2231A, #FF5B52);
+  z-index: 70;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(226,35,26,0.6);
+}
+
+/* ==================== Custom Cursor ==================== */
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 30px; height: 30px;
+  border: 1.5px solid rgba(226,35,26,0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-100px, -100px);
+  transition: transform 0.1s ease-out, width 0.25s ease, height 0.25s ease, background 0.25s ease, opacity 0.25s ease;
+  opacity: 0;
+  mix-blend-mode: difference;
+}
+.cursor-ring.visible { opacity: 1; }
+.cursor-ring.hover-active { width: 54px; height: 54px; background: rgba(226,35,26,0.18); }
+@media (max-width: 1024px), (pointer: coarse) {
+  .cursor-ring { display: none; }
+}
+
+/* ==================== Header ==================== */
+#siteHeader.scrolled {
+  background: rgba(10, 10, 11, 0.94);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px -10px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(226,35,26,0.15);
+}
+#siteHeader.scrolled #headerInner { height: 4.5rem; }
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0; height: 2px;
+  background: #E2231A;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active-link::after { width: 100%; }
+.nav-link.active-link { color: #E2231A !important; }
+
+#mobileMenu.open { transform: translateX(0); }
+
+/* ==================== Hero Slider ==================== */
+.hero-slide {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+}
+.hero-slide.active { opacity: 1; }
+
+.hero-roofline {
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 100%;
+  height: 44px;
+  line-height: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+.hero-roofline svg { width: 100%; height: 100%; display: block; }
+.hero-roofline polygon { fill: #0A0A0B; }
+@media (min-width: 768px) {
+  .hero-roofline { height: 64px; }
+}
+
+/* ==================== Marquee Ticker ==================== */
+.marquee-strip {
+  background: #0A0A0B;
+  border-top: 2px solid #E2231A;
+  border-bottom: 2px solid #E2231A;
+  overflow: hidden;
+  position: relative;
+  padding: 0.9rem 0;
+}
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+  animation: marquee-scroll 32s linear infinite;
+}
+.marquee-strip:hover .marquee-track { animation-play-state: paused; }
+.marquee-item {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0 1.25rem;
+}
+.marquee-sep {
+  color: #E2231A;
+  font-size: 1.1rem;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ==================== Partners Marquee ==================== */
+.partners-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: max-content;
+  animation: partners-scroll 46s linear infinite;
+}
+.partners-marquee:hover .partners-track { animation-play-state: paused; }
+@keyframes partners-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.partner-card {
+  flex-shrink: 0;
+  width: 10rem;
+  height: 7rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px -10px rgba(22,22,24,0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.partner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px -8px rgba(226,35,26,0.3);
+}
+.partner-card img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+.partner-card:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+@media (min-width: 640px) {
+  .partner-card { width: 13rem; height: 8rem; padding: 1.5rem; }
+}
+
+/* ==================== Watermark Section Text ==================== */
+.watermark-text {
+  position: absolute;
+  top: -1.75rem; left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 11vw, 7.5rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(22,22,24,0.07);
+  white-space: nowrap;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: 0.03em;
+}
+.watermark-text.watermark-light {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.07);
+}
+
+/* ==================== Tarihçemiz Timeline ==================== */
+.timeline-line {
+  display: none;
+  position: absolute;
+  top: 2.6rem;
+  left: 4%;
+  right: 4%;
+  height: 2px;
+  background-image: repeating-linear-gradient(to right, rgba(22,22,24,0.18) 0, rgba(22,22,24,0.18) 8px, transparent 8px, transparent 18px);
+  z-index: 0;
+}
+@media (min-width: 1024px) {
+  .timeline-line { display: block; }
+}
+.timeline-item {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.timeline-year {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #E2231A;
+}
+.timeline-dot {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: #E2231A;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 2px rgba(226,35,26,0.35);
+  margin: 0.65rem auto 0;
+}
+.timeline-dot-active {
+  background: #161618;
+  box-shadow: 0 0 0 2px rgba(22,22,24,0.35), 0 0 0 6px rgba(226,35,26,0.15);
+}
+
+/* ==================== Scroll Reveal ==================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== Architectural Notch Buttons ==================== */
+.btn-notch {
+  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== Service Cards ==================== */
+.service-card {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+.service-index {
+  position: absolute;
+  top: 10px; right: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255,255,255,0.65);
+  z-index: 2;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* ==================== Gallery ==================== */
+.gallery-filter-btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.65rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(22,22,24,0.15);
+  background: #fff;
+  color: #161618;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.gallery-filter-btn:hover { border-color: #E2231A; color: #E2231A; }
+.gallery-filter-btn.active {
+  background: #161618;
+  color: #F7F5F0;
+  border-color: #161618;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  box-shadow: 0 10px 40px -10px rgba(22,22,24,0.25);
+  transition: transform 0.3s ease;
+}
+.gallery-item.hide { display: none; }
+.gallery-item:hover { transform: translateY(-6px); }
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.gallery-item:hover img { transform: scale(1.12); }
+.gallery-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(10,10,11,0.92) 0%, rgba(10,10,11,0.1) 65%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+/* ==================== Before / After Slider ==================== */
+.ba-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  user-select: none;
+  background: #0A0A0B;
+}
+.ba-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ba-after-wrap {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+.ba-after-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 3px; height: 100%;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+.ba-after-wrap .ba-img { position: absolute; top: 0; left: 0; height: 100%; width: var(--ba-img-w, 100%); }
+
+.ba-label {
+  position: absolute;
+  top: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background: rgba(10,10,11,0.7);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  z-index: 5;
+  pointer-events: none;
+}
+.ba-label-before { left: 1rem; }
+.ba-label-after { right: 1rem; background: rgba(226,35,26,0.85); }
+
+.ba-slider input[type="range"] {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: ew-resize;
+  z-index: 10;
+}
+.ba-slider input[type="range"]::-webkit-slider-runnable-track { background: transparent; }
+.ba-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23161618"><path d="M8 5l-6 7 6 7M16 5l6 7-6 7"/></svg>') center/22px no-repeat;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  border: 3px solid #E2231A;
+  cursor: ew-resize;
+}
+.ba-slider input[type="range"]::-moz-range-thumb {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23161618"><path d="M8 5l-6 7 6 7M16 5l6 7-6 7"/></svg>') center/22px no-repeat;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  border: 3px solid #E2231A;
+  cursor: ew-resize;
+}
+.ba-slider input[type="range"]::-moz-range-track { background: transparent; border: none; }
+
+/* ==================== Testimonials Carousel ==================== */
+.testi-quote {
+  position: absolute;
+  top: -1.5rem; left: 50%;
+  transform: translateX(-50%);
+  font-family: Georgia, serif;
+  font-size: 10rem;
+  line-height: 1;
+  color: rgba(226,35,26,0.09);
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: #161618;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px -8px rgba(22,22,24,0.5);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.carousel-arrow:hover { background: #E2231A; color: #fff; }
+
+#testimonialDots button {
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  background: rgba(22,22,24,0.2);
+  transition: all 0.3s ease;
+}
+#testimonialDots button.active {
+  background: #E2231A;
+  width: 28px;
+}
+
+/* ==================== Contact Form ==================== */
+.form-input {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid rgba(22,22,24,0.15);
+  background: #F7F5F0;
+  font-size: 0.95rem;
+  color: #161618;
+  transition: all 0.25s ease;
+}
+.form-input:focus {
+  outline: none;
+  border-color: #E2231A;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(226,35,26,0.15);
+}
+.form-input.input-error { border-color: #dc2626; }
+.form-error {
+  display: none;
+  color: #dc2626;
+  font-size: 0.78rem;
+  margin-top: 0.35rem;
+}
+.form-error.show { display: block; }
+
+/* ==================== Footer Socials ==================== */
+.social-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.social-icon:hover { background: #E2231A; color: #fff; transform: translateY(-3px); }
+
+/* ==================== Floating Buttons ==================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 10px 30px -6px rgba(37,211,102,0.7);
+  z-index: 40;
+  animation: pulse-wa 2.4s infinite;
+}
+.whatsapp-float:hover { transform: scale(1.08); }
+
+@keyframes pulse-wa {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.55); }
+  70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 28px; left: 28px;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: #161618;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 24px -6px rgba(22,22,24,0.5);
+  z-index: 40;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.35s ease;
+}
+.back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: #E2231A; color: #fff; }
+
+@media (max-width: 640px) {
+  .whatsapp-float { bottom: 18px; right: 18px; width: 54px; height: 54px; font-size: 1.7rem; }
+  .back-to-top { bottom: 18px; left: 18px; width: 44px; height: 44px; }
+}
