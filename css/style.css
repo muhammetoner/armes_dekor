@@ -61,7 +61,7 @@ html { scroll-behavior: smooth; }
 .nav-link.active-link { color: #E2231A !important; }
 
 #mobileMenu {
-  background-color: rgba(10, 10, 11, 0.98);
+  background-color: #0A0A0B;
 }
 #mobileMenu.open { transform: translateX(0); }
 
