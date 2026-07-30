@@ -60,6 +60,9 @@ html { scroll-behavior: smooth; }
 .nav-link.active-link::after { width: 100%; }
 .nav-link.active-link { color: #E2231A !important; }
 
+#mobileMenu {
+  background-color: rgba(10, 10, 11, 0.98);
+}
 #mobileMenu.open { transform: translateX(0); }
 
 /* ==================== Hero Slider ==================== */
