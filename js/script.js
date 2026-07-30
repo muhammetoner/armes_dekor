@@ -6,12 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menuIcon');
   const mobileMenu = document.getElementById('mobileMenu');
 
+  let lockedScrollY = 0;
   const toggleMenu = () => {
     mobileMenu.classList.toggle('open');
     const isOpen = mobileMenu.classList.contains('open');
     menuIcon.classList.toggle('fa-bars', !isOpen);
     menuIcon.classList.toggle('fa-xmark', isOpen);
-    document.body.classList.toggle('overflow-hidden', isOpen);
+
+    if (isOpen) {
+      lockedScrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${lockedScrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+    } else {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      window.scrollTo(0, lockedScrollY);
+    }
   };
   menuBtn.addEventListener('click', toggleMenu);
   document.querySelectorAll('.mobile-link').forEach(link => {
